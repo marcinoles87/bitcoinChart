@@ -5,7 +5,11 @@ import Card from './components/Card/Card'
 import Charts from './components/Charts/Charts'
 import Country from './components/Country/Country'
 
+import { fetchData } from './api'
+
 function App() {
+
+  
   return (
     <div className="container">
       <Card></Card>
