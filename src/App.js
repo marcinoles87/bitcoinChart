@@ -23,7 +23,16 @@ function App() {
     
   }, [])
 
+  const { API , Description , link} = data
+
   console.log(data[0].API)
+
+  const modifiedData = {
+    api: data[0].API ,
+    description : data[0].Description ,
+    link : data[0].link
+
+  }
 
   
   return (
