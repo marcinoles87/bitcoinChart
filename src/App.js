@@ -1,22 +1,31 @@
 
 import './App.css';
-import React from 'react';
+import axios from 'axios';
 
 import Card from './components/Card/Card'
 import Charts from './components/Charts/Charts'
 import Country from './components/Country/Country'
 
 import { fetchData } from './api/index'
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
-class App extends React.Component() {
+function App() {
 
- async componentDidMount(){
-    const data = await fetchData()
-    console.log(data)
-  }
+  const [data , setData ] = useState();
 
-  render(){
+  const url = 	'https://datausa.io/api/data?drilldowns=Nation&measures=Population';
+
+  useEffect( () => {
+    axios.get(`${url}`).then( (response) => {
+      setData(response.data);
+     
+    } )
+    
+  }, [])
+
+  console.log(data)
+
+  
   return (
     <div className="container">
       <Card></Card>
@@ -26,7 +35,6 @@ class App extends React.Component() {
      
     </div>
   );
-}
 }
 
 export default App;
