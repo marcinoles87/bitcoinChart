@@ -13,17 +13,17 @@ function App() {
 
   const [data , setData ] = useState();
 
-  const url = 	'https://datausa.io/api/data?drilldowns=Nation&measures=Population';
+  const url = 	'https://api.publicapis.org/entries';
 
   useEffect( () => {
     axios.get(`${url}`).then( (response) => {
-      setData(response.data);
+      setData(response.data.entries);
      
     } )
     
   }, [])
 
-  console.log(data)
+  console.log(data[0].API)
 
   
   return (
@@ -31,6 +31,7 @@ function App() {
       <Card></Card>
       <Charts></Charts>
       <Country></Country>
+     
       
      
     </div>
