@@ -13,16 +13,15 @@ function App() {
 
   const [data , setData ] = useState();
 
-  const url = 	'https://api.publicapis.org/entries';
+  
 
   useEffect( () => {
-    axios.get(`${url}`).then( (response) => {
-      setData(response.data);
-     
-    } )
+    fetch('https://api.publicapis.org/entries?category=cat').then( (response) => {
+    setData(response.entries)
+  console.log(response)
     
     
-  }, [])
+  }, []) } )
 
 
 console.log(data)
@@ -34,14 +33,14 @@ console.log(data)
       <Card></Card>
       <Charts></Charts>
       <Country></Country>
-      {data.map( (item) => {
+      {/* {data.map( (item) => {
         return(
           <div>
             <p>{item}</p>
           </div>
           
         )
-      })}
+      })} */}
       
      
     </div>
