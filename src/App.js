@@ -17,22 +17,16 @@ function App() {
 
   useEffect( () => {
     axios.get(`${url}`).then( (response) => {
-      setData(response.data.entries);
+      setData(response.data);
      
     } )
     
+    
   }, [])
 
-  const { API , Description , link} = data
 
-  console.log(data[0].API)
-
-  const modifiedData = {
-    api: data[0].API ,
-    description : data[0].Description ,
-    link : data[0].link
-
-  }
+console.log(data)
+ 
 
   
   return (
@@ -40,7 +34,14 @@ function App() {
       <Card></Card>
       <Charts></Charts>
       <Country></Country>
-     
+      {data.map( (item) => {
+        return(
+          <div>
+            <p>{item}</p>
+          </div>
+          
+        )
+      })}
       
      
     </div>

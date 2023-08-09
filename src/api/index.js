@@ -1,6 +1,6 @@
 import axios from 'axios' ;
 
-const url = 'htpps://covid19.mathdro.id/api' ;
+const url = 	'https://api.publicapis.org/entries';
 
 export const fetchData = async () => {
     try{
