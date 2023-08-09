@@ -16,12 +16,14 @@ function App() {
   
 
   useEffect( () => {
-    fetch('https://api.publicapis.org/entries?category=cat').then( (response) => {
-    setData(response.entries)
-  console.log(response)
+    fetch('https://api.publicapis.org/entries?category=cat')
+    .then( (response) => response.json())
+    .then( (data) => console.log(data))
+  //   setData(response.entries)
+  // console.log(response)
     
     
-  }, []) } )
+  }, []) 
 
 
 console.log(data)
