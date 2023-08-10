@@ -13,15 +13,24 @@ const selected = data.slice(0,10)
 
   return(
   <div>
+   
   {selected.map( (item , index) => {
     console.log(selected)
     return(
+       <Card>
       <div className='card-container' key={index}>
-        <p>Name : {item.symbol} price change : {item.priceChange}</p>
+        <CardContent>
+          <Typography variant="body2" color="text.secondary">
+            <p>Name : {item.symbol} price change : {item.priceChange}</p>
+          </Typography>
+           
+        </CardContent>
+       
         </div>
+        </Card>
     )
   })}
-
+  
    </div>
 
   )
