@@ -17,11 +17,16 @@ function App() {
   
 
   useEffect( () => {
-    fetch('https://api.publicapis.org/entries?category=cat')
+    fetch('https://data.binance.com/api/v3/ticker/24hr')
     .then( (response) => response.json())
     .then( (result) => {
       
-       setData(result.entries)})
+       console.log(result)
+       setData(result)}
+       
+       )
+
+       
       
   
     
@@ -38,15 +43,15 @@ console.log(data)
 
 
     <div className="container">
-      <Cards data={data}></Cards>
+      <Cards></Cards>
       <Charts></Charts>
       <Country></Country>
-      <Button variant='contained'>Hello</Button>
+      <Button variant='contained'>Sort </Button>
 
       {data.map( (item , index) => {
         return(
           <div key={index} className='info-data'>
-            <p>Name {item.API}  : desc {item.Description}</p>
+            <p>Name {item.symbol}  , open price : {item.openPrice} : price change : {item.priceChange} , highest price : {item.highPrice}</p>
           </div>
           
         )

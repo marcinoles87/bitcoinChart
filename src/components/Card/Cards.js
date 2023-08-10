@@ -1,9 +1,9 @@
 import React from 'react'
 
 
-function Cards({data}) {
+function Cards() {
 
-  const {API , Description } = data
+  // const {API , Description } = data
   return (
     <div>
       <h1></h1>
