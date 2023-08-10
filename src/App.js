@@ -11,38 +11,44 @@ import { useEffect, useState } from 'react';
 
 function App() {
 
-  const [data , setData ] = useState();
+  const [data , setData ] = useState([]);
 
   
 
   useEffect( () => {
     fetch('https://api.publicapis.org/entries?category=cat')
     .then( (response) => response.json())
-    .then( (data) => console.log(data))
-  //   setData(response.entries)
-  // console.log(response)
+    .then( (result) => {
+      
+       setData(result.entries)})
+      
+  
     
     
   }, []) 
 
 
-console.log(data)
- 
 
+
+ 
+console.log(data)
   
   return (
+
+
     <div className="container">
       <Card></Card>
       <Charts></Charts>
       <Country></Country>
-      {/* {data.map( (item) => {
+
+      {data.map( (item , index) => {
         return(
-          <div>
+          <div key={index}>
             <p>{item}</p>
           </div>
           
         )
-      })} */}
+      })}
       
      
     </div>
