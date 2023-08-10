@@ -5,6 +5,7 @@ import axios from 'axios';
 import Cards from './components/Card/Cards'
 import Charts from './components/Charts/Charts'
 import Country from './components/Country/Country'
+import Button from '@mui/material/Button';
 
 import { fetchData } from './api/index'
 import { useEffect, useState } from 'react';
@@ -40,6 +41,7 @@ console.log(data)
       <Cards data={data}></Cards>
       <Charts></Charts>
       <Country></Country>
+      <Button variant='contained'>Hello</Button>
 
       {data.map( (item , index) => {
         return(
