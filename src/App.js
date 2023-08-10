@@ -37,18 +37,18 @@ function App() {
 
 
  
-console.log(data)
+
   
   return (
 
 
     <div className="container">
-      <Cards></Cards>
+      <Cards data={data}></Cards>
       <Charts></Charts>
       <Country></Country>
       <Button variant='contained'>Sort </Button>
 
-      {data.map( (item , index) => {
+      {/* {data.map( (item , index) => {
         return(
           <div key={index} className='info-data'>
             <p>Name {item.symbol}  , open price : {item.openPrice} : price change : {item.priceChange} , highest price : {item.highPrice}</p>
@@ -56,7 +56,7 @@ console.log(data)
           
         )
       })}
-      
+       */}
      
     </div>
   );
