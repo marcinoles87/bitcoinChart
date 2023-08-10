@@ -43,20 +43,13 @@ function App() {
 
 
     <div className="container">
-      <Cards data={data}></Cards>
+      
       <Charts></Charts>
       <Country></Country>
+      <Cards data={data}></Cards>
       <Button variant='contained'>Sort </Button>
 
-      {/* {data.map( (item , index) => {
-        return(
-          <div key={index} className='info-data'>
-            <p>Name {item.symbol}  , open price : {item.openPrice} : price change : {item.priceChange} , highest price : {item.highPrice}</p>
-          </div>
-          
-        )
-      })}
-       */}
+     
      
     </div>
   );

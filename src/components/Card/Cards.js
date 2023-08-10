@@ -9,43 +9,22 @@ import Typography from '@mui/material/Typography';
 
 function Cards( {data}) {
 
-  let selected = data.slice(0,10) ;
+const selected = data.slice(0,10)
 
+  return(
   <div>
-    
   {selected.map( (item , index) => {
-    
+    console.log(selected)
     return(
-      <div key={index} className='info-data'>
-        <p>Name {item.symbol}  , open price : {item.openPrice} : price change : {item.priceChange} , highest price : {item.highPrice}</p>
-        <Card sx={{ maxWidth: 345 }}>
-      <CardMedia
-        component="img"
-        alt="green iguana"
-        height="140"
-        image="/static/images/cards/contemplative-reptile.jpg"
-      />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          Lizard
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
-      </CardActions>
-    </Card>
-      </div>
-      
+      <div className='card-container' key={index}>
+        <p>Name : {item.symbol} price change : {item.priceChange}</p>
+        </div>
     )
   })}
 
-
    </div>
+
+  )
   
 }
 
