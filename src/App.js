@@ -2,7 +2,7 @@
 import './App.css';
 import axios from 'axios';
 
-import Card from './components/Card/Card'
+import Cards from './components/Card/Cards'
 import Charts from './components/Charts/Charts'
 import Country from './components/Country/Country'
 
@@ -37,14 +37,14 @@ console.log(data)
 
 
     <div className="container">
-      <Card></Card>
+      <Cards data={data}></Cards>
       <Charts></Charts>
       <Country></Country>
 
       {data.map( (item , index) => {
         return(
-          <div key={index}>
-            <p>{item}</p>
+          <div key={index} className='info-data'>
+            <p>Name {item.API}  : desc {item.Description}</p>
           </div>
           
         )
