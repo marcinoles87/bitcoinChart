@@ -20,8 +20,9 @@ const selected = data.slice(0,10)
        <Card>
       <div className='card-container' key={index}>
         <CardContent>
+          <Typography gutterBottom variant='h5'>BitCoin name : {item.symbol}</Typography>
           <Typography variant="body2" color="text.secondary">
-            <p>Name : {item.symbol} price change : {item.priceChange}</p>
+            <p>price open : {item.openPrice} price change : {item.priceChange} price close : {item.prevClosePrice}</p>
           </Typography>
            
         </CardContent>
