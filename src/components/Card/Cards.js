@@ -21,22 +21,27 @@ const selected = data.slice(0,3)
   <div>
    
    <Grid container spacing={5} justifyContent={'center'} >
-  {selected.map( (item , index) => {
+
+      {selected.map( (item , index) => {
 
     const {symbol , openPrice  , prevClosePrice , priceChange} = item
-    console.log(selected)
+
     return(
        
       <div className='card-container' key={index}>
         <Card>
-        <CardContent>
-          <Typography gutterBottom variant='h5'>BitCoin name : {symbol}</Typography>
-          <Typography variant="body2" color="text.secondary">Open price :{openPrice} </Typography>
-          <Typography variant="body2" color="text.secondary">Change price : {priceChange} </Typography>
-          <Typography variant="body2" color="text.secondary">Close price : {prevClosePrice} </Typography>
 
-           
-        </CardContent>
+          <CardContent>
+
+            <Typography gutterBottom variant='h5'>BitCoin</Typography> 
+            <Typography gutterBottom variant='body2'>name : {symbol}</Typography> 
+            <Typography gutterBottom variant='h5'>Prices</Typography>
+            <Typography variant="body2" color="text.secondary">Open price :{openPrice} </Typography>
+            <Typography variant="body2" color="text.secondary">Change price : {priceChange} </Typography>
+            <Typography variant="body2" color="text.secondary">Close price : {prevClosePrice} </Typography>
+
+           </CardContent>
+
         </Card>
        
         </div>
