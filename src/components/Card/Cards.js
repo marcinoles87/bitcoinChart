@@ -3,9 +3,10 @@ import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
+import  Grid  from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
-import Grid from '@mui/material/Grid'
+import CountUp from 'react-countup';
+
 
 
 function Cards( { data }) {
@@ -24,7 +25,7 @@ const selected = data.slice(0,3)
 
       {selected.map( (item , index) => {
 
-    const {symbol , openPrice  , prevClosePrice , priceChange} = item
+    const {symbol , openPrice  , prevClosePrice , priceChange , count} = item
 
     return(
        
@@ -39,6 +40,13 @@ const selected = data.slice(0,3)
             <Typography variant="body2" color="text.secondary">Open price :{openPrice} </Typography>
             <Typography variant="body2" color="text.secondary">Change price : {priceChange} </Typography>
             <Typography variant="body2" color="text.secondary">Close price : {prevClosePrice} </Typography>
+            <CountUp 
+                start={0} 
+                end={count}
+                duration={2.5}
+                separator=' , '>
+
+            </CountUp>
 
            </CardContent>
 
