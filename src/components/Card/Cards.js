@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -8,9 +8,14 @@ import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid'
 
 
-function Cards( {data}) {
+function Cards( {data }) {
 
-const selected = data.slice(0,10)
+ 
+  if(data.length < 0){
+    return('Loading...')
+  }
+
+const selected = data.slice(0,3)
 
   return(
   <div>
@@ -19,8 +24,9 @@ const selected = data.slice(0,10)
   {selected.map( (item , index) => {
     console.log(selected)
     return(
-       <Card>
+       
       <div className='card-container' key={index}>
+        <Card>
         <CardContent>
           <Typography gutterBottom variant='h5'>BitCoin name : {item.symbol}</Typography>
           <Typography variant="body2" color="text.secondary">
@@ -28,13 +34,16 @@ const selected = data.slice(0,10)
           </Typography>
            
         </CardContent>
+        </Card>
        
         </div>
-        </Card>
+      
     )
   })}
 
 </Grid>
+
+
   
    </div>
 
