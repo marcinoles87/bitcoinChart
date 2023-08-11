@@ -10,9 +10,6 @@ import Grid from '@mui/material/Grid'
 
 function Cards( { data }) {
 
-  const {openPrice } = data
-
-console.log(openPrice)
  
   if(data.length < 1){
     return('Loading...')
@@ -25,16 +22,18 @@ const selected = data.slice(0,3)
    
    <Grid container spacing={5} justifyContent={'center'} >
   {selected.map( (item , index) => {
+
+    const {symbol , openPrice  , prevClosePrice , priceChange} = item
     console.log(selected)
     return(
        
       <div className='card-container' key={index}>
         <Card>
         <CardContent>
-          <Typography gutterBottom variant='h5'>BitCoin name : {item.symbol}</Typography>
-          <Typography variant="body2" color="text.secondary">{item.openPrice} </Typography>
-          <Typography variant="body2" color="text.secondary">{item.priceChange} </Typography>
-          <Typography variant="body2" color="text.secondary">{item.prevClosePrice} </Typography>
+          <Typography gutterBottom variant='h5'>BitCoin name : {symbol}</Typography>
+          <Typography variant="body2" color="text.secondary">Open price :{openPrice} </Typography>
+          <Typography variant="body2" color="text.secondary">Change price : {priceChange} </Typography>
+          <Typography variant="body2" color="text.secondary">Close price : {prevClosePrice} </Typography>
 
            
         </CardContent>
