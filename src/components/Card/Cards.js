@@ -5,6 +5,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import Grid from '@mui/material/Grid'
 
 
 function Cards( {data}) {
@@ -14,6 +15,7 @@ const selected = data.slice(0,10)
   return(
   <div>
    
+   <Grid container spacing={5} justifyContent={'center'} >
   {selected.map( (item , index) => {
     console.log(selected)
     return(
@@ -31,6 +33,8 @@ const selected = data.slice(0,10)
         </Card>
     )
   })}
+
+</Grid>
   
    </div>
 
