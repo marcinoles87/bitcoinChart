@@ -8,10 +8,13 @@ import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid'
 
 
-function Cards( {data }) {
+function Cards( { data }) {
 
+  const {openPrice } = data
+
+console.log(openPrice)
  
-  if(data.length < 0){
+  if(data.length < 1){
     return('Loading...')
   }
 
@@ -29,9 +32,10 @@ const selected = data.slice(0,3)
         <Card>
         <CardContent>
           <Typography gutterBottom variant='h5'>BitCoin name : {item.symbol}</Typography>
-          <Typography variant="body2" color="text.secondary">
-            <p>price open : {item.openPrice} price change : {item.priceChange} price close : {item.prevClosePrice}</p>
-          </Typography>
+          <Typography variant="body2" color="text.secondary">{item.openPrice} </Typography>
+          <Typography variant="body2" color="text.secondary">{item.priceChange} </Typography>
+          <Typography variant="body2" color="text.secondary">{item.prevClosePrice} </Typography>
+
            
         </CardContent>
         </Card>
