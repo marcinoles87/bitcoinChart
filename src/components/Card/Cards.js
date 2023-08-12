@@ -6,10 +6,19 @@ import CardMedia from '@mui/material/CardMedia';
 import  Grid  from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import CountUp from 'react-countup';
+import { createTheme } from '@mui/material';
+import { blueGrey, purple } from '@mui/material/colors';
 
 
 
 function Cards( { data }) {
+
+  const theme = createTheme({
+    palette : {
+      primary : blueGrey,
+      secondary : purple
+    }
+  })
 
  
   if(data.length < 1){
@@ -43,7 +52,7 @@ const nowaData = `${d.getDate()}.${d.getMonth()}.${d.getFullYear()}`
             <Typography gutterBottom variant='body2' className='name'>name : {symbol}</Typography> 
             <Typography gutterBottom variant='body2' className='name'>name : {nowaData}</Typography> 
             <Typography gutterBottom variant='h5'>Prices</Typography>
-            <Typography variant="body2" color="text.secondary">Open price :{openPrice} </Typography>
+            <Typography variant="body2" color="text.secondary" >Open price :{openPrice} </Typography>
             <Typography variant="body2" color="text.secondary">Change price : {priceChange} </Typography>
             <Typography variant="body2" color="text.secondary">Close price : {prevClosePrice} </Typography>
             <p>Count : </p>
