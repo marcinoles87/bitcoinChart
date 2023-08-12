@@ -17,6 +17,9 @@ function Cards( { data }) {
   }
 
 const selected = data.slice(0,3)
+const d = new Date() ;
+
+const nowaData = `${d.getDate()}.${d.getMonth()}.${d.getFullYear()}`
 
   return(
   <div>
@@ -25,7 +28,9 @@ const selected = data.slice(0,3)
 
       {selected.map( (item , index) => {
 
-    const {symbol , openPrice  , prevClosePrice , priceChange , count} = item
+    const {symbol , openPrice  , prevClosePrice , priceChange , count} = item ;
+    
+
 
     return(
        
@@ -35,11 +40,13 @@ const selected = data.slice(0,3)
           <CardContent>
 
             <Typography gutterBottom variant='h5'>BitCoin</Typography> 
-            <Typography gutterBottom variant='body2'>name : {symbol}</Typography> 
+            <Typography gutterBottom variant='body2' className='name'>name : {symbol}</Typography> 
+            <Typography gutterBottom variant='body2' className='name'>name : {nowaData}</Typography> 
             <Typography gutterBottom variant='h5'>Prices</Typography>
             <Typography variant="body2" color="text.secondary">Open price :{openPrice} </Typography>
             <Typography variant="body2" color="text.secondary">Change price : {priceChange} </Typography>
             <Typography variant="body2" color="text.secondary">Close price : {prevClosePrice} </Typography>
+            <p>Count : </p>
             <CountUp 
                 start={0} 
                 end={count}
