@@ -9,7 +9,7 @@ import { blueGrey, purple, red } from '@mui/material/colors';
 import { dark } from '@mui/material/styles/createPalette';
 
 import cx from 'classnames'
-import './styles.css'
+import '../Card/styles.css'
 
 
 
@@ -37,7 +37,7 @@ const nowaData = `${d.getDate()}.${d.getMonth()}.${d.getFullYear()}`
   return(
   <div>
    
-   <Grid container spacing={5} justifyContent={'center'} className={cx( styles.active)} >
+   <Grid container spacing={5} justifyContent={'center'} className={cx()} >
 
       {selected.map( (item , index) => {
 
