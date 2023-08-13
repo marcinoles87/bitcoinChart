@@ -1,24 +1,28 @@
 import React, { useState } from 'react'
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
 import  Grid  from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import CountUp from 'react-countup';
 import { createTheme } from '@mui/material';
-import { blueGrey, purple } from '@mui/material/colors';
+import { blueGrey, purple, red } from '@mui/material/colors';
+import { dark } from '@mui/material/styles/createPalette';
+
+import cx from 'classnames'
+import './styles.css'
 
 
 
 function Cards( { data }) {
 
-  const theme = createTheme({
-    palette : {
-      primary : blueGrey,
-      secondary : purple
-    }
-  })
+  // const theme = createTheme({
+  //   palette : {
+  //     primary : blueGrey,
+  //     secondary : purple , 
+  //     color : red ,
+  //     background : dark ,
+  //   }
+  // })
 
  
   if(data.length < 1){
@@ -33,7 +37,7 @@ const nowaData = `${d.getDate()}.${d.getMonth()}.${d.getFullYear()}`
   return(
   <div>
    
-   <Grid container spacing={5} justifyContent={'center'} >
+   <Grid container spacing={5} justifyContent={'center'} className={cx( styles.active)} >
 
       {selected.map( (item , index) => {
 
@@ -52,7 +56,7 @@ const nowaData = `${d.getDate()}.${d.getMonth()}.${d.getFullYear()}`
             <Typography gutterBottom variant='body2' className='name'>name : {symbol}</Typography> 
             <Typography gutterBottom variant='body2' className='name'>name : {nowaData}</Typography> 
             <Typography gutterBottom variant='h5'>Prices</Typography>
-            <Typography variant="body2" color="text.secondary" >Open price :{openPrice} </Typography>
+            <Typography variant="theme"color="text.secondary" >Open price :{openPrice} </Typography>
             <Typography variant="body2" color="text.secondary">Change price : {priceChange} </Typography>
             <Typography variant="body2" color="text.secondary">Close price : {prevClosePrice} </Typography>
             <p>Count : </p>
