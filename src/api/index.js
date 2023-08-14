@@ -1,6 +1,6 @@
 import axios from 'axios' ;
 
-const url = 	'https://api.publicapis.org/entries';
+const url = 	'https://data.binance.com/api/v3/ticker/24hr';
 
 export const fetchData = async () => {
     try{
