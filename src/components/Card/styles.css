@@ -5,4 +5,10 @@
 .card-container{
     
     margin:20px;
+    border-bottom: 10px solid rgb(56, 56, 224);
+
+}
+
+.warning{
+    border-bottom: 10px solid orange;
 }

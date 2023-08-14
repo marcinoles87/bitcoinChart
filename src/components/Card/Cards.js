@@ -13,7 +13,7 @@ import '../Card/styles.css'
 
 
 
-function Cards( { data }) {
+function Cards( { data , select }) {
 
   // const theme = createTheme({
   //   palette : {
@@ -29,10 +29,13 @@ function Cards( { data }) {
     return('Loading...')
   }
 
-const selected = data.slice(0,3)
+const start = select - 1 ;
+const selected = data.slice(start,select)
 const d = new Date() ;
 
 const nowaData = `${d.getDate()}.${d.getMonth()}.${d.getFullYear()}`
+
+
 
   return(
   <div>
@@ -43,8 +46,6 @@ const nowaData = `${d.getDate()}.${d.getMonth()}.${d.getFullYear()}`
 
     const {symbol , openPrice  , prevClosePrice , priceChange , count} = item ;
     
-
-
     return(
        
       <div className='card-container' key={index}>

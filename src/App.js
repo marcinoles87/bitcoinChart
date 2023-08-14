@@ -13,6 +13,9 @@ import { useEffect, useState } from 'react';
 function App() {
 
   const [data , setData ] = useState([]);
+  const one = 1 ;
+  const two = 2 ;
+  const three = 3;
 
   
 
@@ -46,7 +49,9 @@ function App() {
       
       <Charts></Charts>
       <Country></Country>
-      <Cards data={data}></Cards>
+      <Cards data={data} select={one}></Cards>
+      <Cards data={data} select={two}></Cards>
+      <Cards data={data} select={three}></Cards>
       <Button variant='contained'>Sort </Button>
 
      
