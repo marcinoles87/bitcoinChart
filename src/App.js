@@ -49,7 +49,7 @@ function App() {
       
       <Charts></Charts>
       <Country></Country>
-      <Cards data={data} select={one}></Cards>
+      <Cards data={data} select={one} ></Cards>
       <Cards data={data} select={two}></Cards>
       <Cards data={data} select={three}></Cards>
       <Button variant='contained'>Sort </Button>

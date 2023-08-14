@@ -40,7 +40,7 @@ const nowaData = `${d.getDate()}.${d.getMonth()}.${d.getFullYear()}`
   return(
   <div>
    
-   <Grid container spacing={5} justifyContent={'center'} className={cx()} >
+   <Grid container spacing={5} justifyContent={'center'} >
 
       {selected.map( (item , index) => {
 

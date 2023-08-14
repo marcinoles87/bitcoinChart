@@ -1,14 +1,9 @@
-.active{
-    border-bottom: 10px solid blue;
-}
+
 
 .card-container{
     
-    margin:20px;
+    margin:50px 30px !important ;
     border-bottom: 10px solid rgb(56, 56, 224);
 
 }
 
-.warning{
-    border-bottom: 10px solid orange;
-}
