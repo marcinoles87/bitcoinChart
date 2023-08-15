@@ -1,16 +1,28 @@
 import React from 'react'
 import { useEffect , useState } from 'react'
 
-function Charts() {
+function Charts({data}) {
 
-  const [rank , setRank ] = useState({})
+  const ranked = data.slice(0,100)
 
-  useEffect( () => {
-
-  }, [])
+  if(data.length < 2){
+    return( 'Ranking is loading ...')
+  }
 
   return (
-    <div>Charts</div>
+    <div>Charts
+      <p>Rank BitCoin</p>
+      <ul>
+      {ranked.map( (item , index) => {
+
+        
+        return(
+            <li key={index}>Name {item.symbol} , high price : {item.highPrice}</li>
+        )
+      })}
+
+      </ul>
+    </div>
   )
 }
 

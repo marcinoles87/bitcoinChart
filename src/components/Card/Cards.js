@@ -14,16 +14,6 @@ import '../Card/styles.css'
 
 
 function Cards( { data , select }) {
-
-  // const theme = createTheme({
-  //   palette : {
-  //     primary : blueGrey,
-  //     secondary : purple , 
-  //     color : red ,
-  //     background : dark ,
-  //   }
-  // })
-
  
   if(data.length < 1){
     return('Loading...')
