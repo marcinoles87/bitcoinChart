@@ -13,6 +13,7 @@ function Charts({data}) {
   return (
     <div>Charts
       <p>Rank BitCoin</p>
+      <canvas id="myChart" ></canvas>
       <ul>
       {ranked.map( (item , index) => {
 
