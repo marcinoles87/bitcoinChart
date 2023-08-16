@@ -5,19 +5,29 @@ import '../Charts/Charts.css';
 
 function Charts({data}) {
 
-  const ranked = data.slice(0,100)
+  const [dailyData , setDailydata] = useState([]);
 
-  const lineChart = () => {
+  const ranked = data.slice(0,100) ;
 
+  useEffect( () => {
+    setDailydata(data)
+  },[])
+
+  console.log(dailyData[0])
+
+  const lineChart = (
+    dailyData[0] ?
     <Line
+
+    
       data = {
         {
           labels : 'Name' ,
           datasets : [{} , {}]
         }
       }
-    ></Line>
-  }
+    ></Line>  : null
+  )
 
   if(data.length < 2){
     return( 'Ranking is loading ...')
