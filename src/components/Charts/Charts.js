@@ -26,8 +26,10 @@ function Charts({data}) {
   },[])
 
   
+ 
   const datas = {
-    labels : [dailyData[0].symbol] ,
+    
+    labels : [dailyData.map( item => item.symbol)] ,
     datasets : [
       {
         label : '369' ,
@@ -53,6 +55,7 @@ function Charts({data}) {
         borderWidth : 1,
       }
     ]
+  
   }
 
   
