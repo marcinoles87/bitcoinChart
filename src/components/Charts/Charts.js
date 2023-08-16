@@ -4,22 +4,62 @@ import {Line , Chart , Bar} from 'react-chartjs-2' ;
 import {Chart as ChartJS , BarElement , CategoryScale , LinearScale , Tooltip , Legend } from 'chart.js';
 import '../Charts/Charts.css';
 
+ChartJS.register(
+  BarElement ,
+  CategoryScale,
+  LinearScale,
+  Tooltip,
+  Legend,
+)
+
 function Charts({data}) {
 
   const [dailyData , setDailydata] = useState({});
 
   const ranked = data.slice(0,100) ;
   const options = {
-    
-  }
 
+  }
+  
   useEffect( () => {
     setDailydata(ranked)
   },[])
 
   
+  const datas = {
+    labels : [dailyData[0].symbol] ,
+    datasets : [
+      {
+        label : '369' ,
+        data : [3,5,6] ,
+        backgroundColor : 'black' ,
+        borderColor : 'black',
+        borderWidth : 1,
+      },
+
+      {
+        label : '369' ,
+        data : [3,5,9] ,
+        backgroundColor : 'blue' ,
+        borderColor : 'black',
+        borderWidth : 1,
+      },
+
+      {
+        label : '369' ,
+        data : [3,5,6] ,
+        backgroundColor : 'red' ,
+        borderColor : 'black',
+        borderWidth : 1,
+      }
+    ]
+  }
+
   
 
+  
+  
+  console.log(dailyData)
   // const lineChart = (
   //   dailyData[0] ?
   //   <Line
@@ -43,7 +83,7 @@ function Charts({data}) {
   return (
     <div>Charts
       <p>Rank BitCoin
-        <Bar data = {data} options={options}></Bar>
+        <Bar data = {datas} options={options}></Bar>
       </p>
     
       <canvas id="myChart" ></canvas>
