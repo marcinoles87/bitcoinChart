@@ -5,7 +5,7 @@ import '../Charts/Charts.css';
 
 function Charts({data}) {
 
-  const [dailyData , setDailydata] = useState([]);
+  const [dailyData , setDailydata] = useState({});
 
   const ranked = data.slice(0,100) ;
 
