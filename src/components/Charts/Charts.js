@@ -29,27 +29,27 @@ function Charts({data}) {
   const dataBitCoin = ranked.map((item) => item.highPrice)
   
   
- 
+ console.log(dataBitCoin)
   
   const datas = {
 
-    
+
     
     labels : [ranked.map( (item) => item.symbol)] ,
     datasets : [
 
       
       {
-        label : '369' ,
-        data : [12,5,6,3] ,
+        label : labels.map( (item) => item.symbol) ,
+        data : [dataBitCoin[0] , dataBitCoin[1] ,2],
         backgroundColor : 'black' ,
         borderColor : 'black',
         borderWidth : 1,
       },
 
       {
-        label : '369' ,
-        data : [3,5,9,5] ,
+        label : 'blue' ,
+        data : [3 , 3,6] ,
         backgroundColor : 'blue' ,
         borderColor : 'black',
         borderWidth : 1,
@@ -57,7 +57,7 @@ function Charts({data}) {
 
       {
         label : '369' ,
-        data : [3,5,6,12 ],
+        data : [5,4,5 ],
         backgroundColor : 'red' ,
         borderColor : 'black',
         borderWidth : 1,
@@ -70,7 +70,7 @@ function Charts({data}) {
   
   }
 
-  console.log(datas)
+
 
   Object.assign(datas , {labels})
   Object.assign(datas , {dataBitCoin})
@@ -80,7 +80,7 @@ function Charts({data}) {
 
   
   
-  console.log(dailyData)
+
   // const lineChart = (
   //   dailyData[0] ?
   //   <Line
