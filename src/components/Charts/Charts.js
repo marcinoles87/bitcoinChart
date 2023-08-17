@@ -25,12 +25,17 @@ function Charts({data}) {
     setDailydata(ranked)
   },[])
 
+  const labels = ranked.map((item) => item.symbol)
+  
   
  
+  
   const datas = {
     
-    labels : [dailyData.map( item => item.symbol)] ,
+    labels : [ranked.map( (item) => item.symbol)] ,
     datasets : [
+
+      
       {
         label : '369' ,
         data : [3,5,6] ,
@@ -55,10 +60,14 @@ function Charts({data}) {
         borderWidth : 1,
       }
     ]
+
+    
   
   }
 
-  
+  console.log(datas)
+
+  Object.assign(datas , labels)
 
   
   
