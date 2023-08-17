@@ -16,7 +16,7 @@ function Charts({data}) {
 
   const [dailyData , setDailydata] = useState({});
 
-  const ranked = data.slice(0,10) ;
+  const ranked = data.slice(0,5) ;
   const options = {
 
   }
@@ -26,7 +26,7 @@ function Charts({data}) {
   },[])
 
   const labels = ranked.map((item) => item.symbol)
-  const dataBitCoin = ranked.map((item) => item.highPrice)
+  const dataBitCoin = ranked.map((item) => (item.highPrice)*10)
   
   
  console.log(dataBitCoin)
@@ -40,25 +40,40 @@ function Charts({data}) {
 
       
       {
-        label : labels.map( (item) => item.symbol) ,
-        data : [dataBitCoin[0] , dataBitCoin[1] ,2],
+        label : labels[0] ,
+        data : [dataBitCoin[0]],
         backgroundColor : 'black' ,
         borderColor : 'black',
         borderWidth : 1,
       },
 
       {
-        label : 'blue' ,
-        data : [3 , 3,6] ,
+        label : labels[1] ,
+        data :  [dataBitCoin[1]] ,
         backgroundColor : 'blue' ,
         borderColor : 'black',
         borderWidth : 1,
       },
 
       {
-        label : '369' ,
-        data : [5,4,5 ],
+        label : labels[2] ,
+        data :  [dataBitCoin[2]],
         backgroundColor : 'red' ,
+        borderColor : 'black',
+        borderWidth : 1,
+      } ,
+
+      {
+        label : labels[3] ,
+        data :  [dataBitCoin[3]],
+        backgroundColor : 'green' ,
+        borderColor : 'black',
+        borderWidth : 1,
+      },
+      {
+        label : labels[4] ,
+        data :  [dataBitCoin[4]],
+        backgroundColor : 'pink' ,
         borderColor : 'black',
         borderWidth : 1,
       }
@@ -71,9 +86,11 @@ function Charts({data}) {
   }
 
 
+ 
+console.log(datas)
 
-  Object.assign(datas , {labels})
-  Object.assign(datas , {dataBitCoin})
+  // Object.assign(datas , {labels})
+  // Object.assign(datas , {dataBitCoin}) // dodaje nowa wlasnosc do datas
 
   datas.datasets.push({dataBitCoin})
 
