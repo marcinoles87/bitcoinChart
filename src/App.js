@@ -16,6 +16,8 @@ function App() {
   const one = 1 ;
   const two = 2 ;
   const three = 3;
+  const four = 4;
+  const five = 5;
 
   
 
@@ -48,10 +50,12 @@ function App() {
     <div className="container">
       
       
-      <Country></Country>
+
       <Cards data={data} select={one} ></Cards>
       <Cards data={data} select={two}></Cards>
       <Cards data={data} select={three}></Cards>
+      <Cards data={data} select={four}></Cards>
+      <Cards data={data} select={five}></Cards>
       <Button variant='contained'>Sort </Button>
     
     </div>

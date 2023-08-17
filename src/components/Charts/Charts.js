@@ -120,7 +120,7 @@ console.log(datas)
 
   return (
     <div>Charts
-      <p>Rank BitCoin
+      <p>Rank the Highest Price BitCoin
         <Bar data = {datas} options={options}></Bar>
       </p>
     
