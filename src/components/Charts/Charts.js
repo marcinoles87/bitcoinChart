@@ -1,7 +1,7 @@
 import React from 'react'; 
 import { useEffect , useState } from 'react' ;
-import {Line , Chart , Bar} from 'react-chartjs-2' ;
-import {Chart as ChartJS , BarElement , CategoryScale , LinearScale , Tooltip , Legend } from 'chart.js';
+import {Line , Chart , Bar, Doughnut} from 'react-chartjs-2' ;
+import {Chart as ChartJS , BarElement , CategoryScale , LinearScale , Tooltip , Legend, ArcElement } from 'chart.js';
 import '../Charts/Charts.css';
 
 ChartJS.register(
@@ -10,7 +10,11 @@ ChartJS.register(
   LinearScale,
   Tooltip,
   Legend,
+  ArcElement
 )
+
+
+
 
 function Charts({data}) {
 
@@ -69,6 +73,7 @@ function Charts({data}) {
         backgroundColor : 'green' ,
         borderColor : 'black',
         borderWidth : 1,
+        hoverOffset: 4
       },
       {
         label : labels[4] ,
@@ -76,7 +81,10 @@ function Charts({data}) {
         backgroundColor : 'pink' ,
         borderColor : 'black',
         borderWidth : 1,
-      }
+        hoverOffset: 4
+      } ,
+
+      
 
       
     ]
@@ -122,6 +130,7 @@ console.log(datas)
     <div>Charts
       <p>Rank the Highest Price BitCoin
         <Bar data = {datas} options={options}></Bar>
+        <Doughnut data = {datas} options={options}></Doughnut>
       </p>
     
       <canvas id="myChart" ></canvas>
