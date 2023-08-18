@@ -53,7 +53,7 @@ function Charts({data}) {
 
       {
         label : labels[1] ,
-        data :  [dataBitCoin[1]] ,
+        data :  [dataBitCoin[1]]  ,
         backgroundColor : 'blue' ,
         borderColor : 'black',
         borderWidth : 1,
@@ -105,7 +105,27 @@ console.log(datas)
   datas.datasets.push({dataBitCoin})
 
 
+  const datas2 = {
+
+
+
+    
+    labels : [labels[0] , labels[1] , labels[2] , labels[3] , labels[4]] ,
+    datasets : [
+
+    
+      {
+        label : labels ,
+        data : [dataBitCoin[0] , dataBitCoin[1] , dataBitCoin[2] , dataBitCoin[3] , dataBitCoin[4]],
+        backgroundColor : ['red' , 'blue' ,'green' , 'pink' , 'black'] ,
+        borderColor : 'black',
+        borderWidth : 1,
+        
+      }]
+
+
   
+   }
   
 
   // const lineChart = (
@@ -132,10 +152,9 @@ console.log(datas)
     <div>Charts
       <p>Rank the Highest Price BitCoin
         <Bar data = {datas} options={options}></Bar>
-        <Doughnut data = {datas} options={options}></Doughnut>
+        <Doughnut data = {datas2} options={options}  width={300} height={300}></Doughnut>
       </p>
     
-      <canvas id="myChart" ></canvas>
       
       <ul>
       {ranked.map( (item , index) => {
