@@ -57,6 +57,7 @@ function Charts({data}) {
         backgroundColor : 'blue' ,
         borderColor : 'black',
         borderWidth : 1,
+        hoverOffset: 4
       },
 
       {
@@ -65,6 +66,7 @@ function Charts({data}) {
         backgroundColor : 'red' ,
         borderColor : 'black',
         borderWidth : 1,
+        hoverOffset: 4
       } ,
 
       {
