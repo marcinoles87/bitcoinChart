@@ -12,3 +12,8 @@ li:nth-child(even){
     height: 300px;
 }
 
+.charts-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}

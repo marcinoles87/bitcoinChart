@@ -149,7 +149,7 @@ console.log(datas)
   }
 
   return (
-    <div>Charts
+    <div className='charts-container'>Charts
       <p>Rank the Highest Price BitCoin
         <Bar data = {datas} options={options}></Bar>
         <Doughnut data = {datas2} options={options}  width={300} height={300}></Doughnut>
