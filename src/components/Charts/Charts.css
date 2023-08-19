@@ -16,4 +16,17 @@ li:nth-child(even){
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
+}
+
+ul{
+    list-style:decimal;
+    text-align: center;
+    
+}
+
+canvas{
+    margin: 50px;
+    width: 50vw;
+    height: 300px;
 }
