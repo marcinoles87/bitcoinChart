@@ -152,10 +152,12 @@ console.log(datas)
     <div className='charts-container'>Charts
       <p>Rank the Highest Price BitCoin
         <h1>Bar Charts</h1>
-        <Bar data = {datas} options={options}></Bar>
+        <Bar data = {datas} options={options}></Bar></p>
+        
+       <p> 
         <h1>Donat Charts</h1>
-        <Doughnut data = {datas2} options={options}  width={300} height={300}></Doughnut>
-      </p>
+       <Doughnut data = {datas2} options={options}  width={300} height={300}></Doughnut></p>
+      
     
       
       <ul>
