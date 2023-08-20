@@ -117,7 +117,7 @@ console.log(datas)
       {
         label : labels ,
         data : [dataBitCoin[0] , dataBitCoin[1] , dataBitCoin[2] , dataBitCoin[3] , dataBitCoin[4]],
-        backgroundColor : ['red' , 'blue' ,'green' , 'pink' , 'black'] ,
+        backgroundColor : ['black' , 'blue' ,'red' , 'green' , 'pink'] ,
         borderColor : 'black',
         borderWidth : 1,
         
