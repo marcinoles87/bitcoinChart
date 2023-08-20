@@ -107,8 +107,6 @@ console.log(datas)
 
   const datas2 = {
 
-
-
     
     labels : [labels[0] , labels[1] , labels[2] , labels[3] , labels[4]] ,
     datasets : [

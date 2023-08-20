@@ -1,9 +1,13 @@
 
 
 .card-container{
-    
+    min-height: 30vh;
     margin:50px 30px !important ;
     border-bottom: 10px solid rgb(56, 56, 224);
 
+}
+
+.css-bhp9pd-MuiPaper-root-MuiCard-root{
+    height: 400px;
 }
 

@@ -56,7 +56,7 @@ function App() {
       <Cards data={data} select={three}></Cards>
       <Cards data={data} select={four}></Cards>
       <Cards data={data} select={five}></Cards>
-      <Button variant='contained'>Sort </Button>
+      
     
     </div>
 
