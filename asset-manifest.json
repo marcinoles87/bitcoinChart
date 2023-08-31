@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/bitcoinChart/static/css/main.bce083c4.css",
+    "main.js": "/bitcoinChart/static/js/main.51038454.js",
+    "static/js/787.9141f828.chunk.js": "/bitcoinChart/static/js/787.9141f828.chunk.js",
+    "index.html": "/bitcoinChart/index.html",
+    "main.bce083c4.css.map": "/bitcoinChart/static/css/main.bce083c4.css.map",
+    "main.51038454.js.map": "/bitcoinChart/static/js/main.51038454.js.map",
+    "787.9141f828.chunk.js.map": "/bitcoinChart/static/js/787.9141f828.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bce083c4.css",
+    "static/js/main.51038454.js"
+  ]
+}
